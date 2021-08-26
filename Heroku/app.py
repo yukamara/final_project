@@ -25,7 +25,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-Pet = create_classes(db)
+Amazon = create_classes(db)
 
 # create route that renders index.html template
 @app.route("/")
