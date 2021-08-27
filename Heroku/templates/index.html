@@ -1,39 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pet Pals!</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+{% block content %}
 
-<body>
-    <div class="container">
-        <div class="jumbotron" style="text-align: center">
-            <h1>Pet Pal</h1>
-            <p>Find your pet a pal!</p>
-        </div>
+<!-- Starts image section -->
+<div class="row justify-content-md-center mb-4">
+    <h2 class='text-primary'>Predict Iris Flower Species</h2>
+</div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Look at all of the current pet pals!</h2>
-                <div id="plot"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <h2><a href="/send">Add your pet here!</a></h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="{{url_for('static', filename='images/iris_setosa.jpg')}}"
+                class="img-thumbnail" />
+            <div class="caption">
+                <p><strong>Iris Setosa</strong></p>
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="{{url_for('static', filename='images/iris_versicolor.jpg')}}"
+                class="img-thumbnail" />
+            <div class="caption">
+                <p><strong>Iris Versicolor</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="{{url_for('static', filename='images/iris_virginica.jpg')}}"
+                class="img-thumbnail" />
+            <div class="caption">
+                <p><strong>Iris Virginica</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Ends image section -->
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- Starts form section -->
+<div class="form-container ">
+    <form class="form-horizontal" action="/predict/" method="post">
 
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-</body>
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="sepal_length">Sepal length (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="sepal_length" name="sepal_length">
+            </div>
+        </div>
 
-</html>
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="sepal_width">Sepal width (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="sepal_width" name="sepal_width">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="petal_length">Petal length (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="petal_length" name="petal_length">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="petal_width">Petal width (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="petal_width" name="petal_width">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="">&nbsp;</label>
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </div>
+    </form>
+    <!-- Ends form section -->
+
+
+</div>
+
+
+{% endblock %}
