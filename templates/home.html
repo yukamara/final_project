@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<!-- jumbotron begins-->
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>Amazon Fine Foods Review Ratings</h1>
+        <hr>
+        <h4>
+            We built a machine learning model to help determine the ratings for Amazon Fine Foods
+            reviews. The Reviews are rated on a scale of 1-5, where 1 means the worst review and 5
+            means the best review.
+        </h4>
+    </div>
+</div>
+<!-- jumbotron ends -->
+
+<!-- Begin form section -->
+<div class="form-container ">
+    <form class="form-horizontal" action="/predict/" method="post">
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="sepal_length">Sepal length (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="sepal_length" name="sepal_length">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="sepal_width">Sepal width (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="sepal_width" name="sepal_width">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="petal_length">Petal length (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="petal_length" name="petal_length">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="petal_width">Petal width (cm):</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="petal_width" name="petal_width">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="">&nbsp;</label>
+            <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </div>
+    </form>
+    <!-- Ends form section -->
+
+
+</div>
+
+
+{% endblock %}
