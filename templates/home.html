@@ -20,7 +20,7 @@
 <!-- Begin form section -->
 <div class="form-container ">
 
-    <!-- <form class="form-horizontal" action="/predict/" method="post"> -->
+    <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('send')}}" method="post">
         <label class="control-label col-sm-12" for="review-text"></label>
         <div class="col-sm-12">
@@ -35,10 +35,10 @@
         </div>
     </form>
     <!-- Ends form section -->
-
-    <!-- Main Input For Receiving Query to our ML -->
-
-
+</div>
+<hr>
+<div>
+    <h2>Graph and other tables generated from the model will go below this line.</h2>
 </div>
 
 
