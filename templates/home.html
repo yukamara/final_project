@@ -19,44 +19,24 @@
 
 <!-- Begin form section -->
 <div class="form-container ">
-    <form class="form-horizontal" action="/predict/" method="post">
 
-        <div class="form-group row">
-            <label class="control-label col-sm-2" for="sepal_length">Sepal length (cm):</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="sepal_length" name="sepal_length">
-            </div>
+    <!-- <form class="form-horizontal" action="/predict/" method="post"> -->
+    <form action="{{ url_for('send')}}" method="post">
+        <label class="control-label col-sm-12" for="review-text"></label>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" id="review-text" name="amazonReview"
+                placeholder="Enter a review" required="required">
         </div>
 
-        <div class="form-group row">
-            <label class="control-label col-sm-2" for="sepal_width">Sepal width (cm):</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="sepal_width" name="sepal_width">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="control-label col-sm-2" for="petal_length">Petal length (cm):</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="petal_length" name="petal_length">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="control-label col-sm-2" for="petal_width">Petal width (cm):</label>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="petal_width" name="petal_width">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="control-label col-sm-2" for="">&nbsp;</label>
-            <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="btn btn-primary">Predict</button>
-            </div>
+        <label class="control-label" for="">&nbsp;</label>
+        <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Click here to see
+                the rating for this review</button>
         </div>
     </form>
     <!-- Ends form section -->
+
+    <!-- Main Input For Receiving Query to our ML -->
 
 
 </div>

@@ -8,7 +8,7 @@
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <title> Rate Amazom Reviews </title>
+        <title> Amazom Reviews Ratings</title>
 
         <style type="text/css">
             .jumbotron {
@@ -27,6 +27,10 @@
 
             body h1 h4 {
                 margin: 0;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            h1 h4 {
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
 
@@ -89,17 +93,6 @@
                     float: none;
                 }
 
-                .topnav a,
-                .topnav input[type=text],
-                .topnav .search-container button {
-                    float: none;
-                    display: block;
-                    text-align: left;
-                    width: 100%;
-                    margin: 0;
-                    padding: 14px;
-                }
-
                 .topnav input[type=text] {
                     border: 2px solid #ccc;
                 }
@@ -112,29 +105,23 @@
         <!-- begin nav section -->
         <div class="topnav">
             <a class="active" href="#home">Home</a>
-            <div class="search-container">
-                <form action="http://localhost:5000/" method="post">
-                    <input type="text" placeholder="Search" name="search">
-                    <button type="submit"><i class="fa fa-search"></i>Search</button>
-                </form>
-            </div>
         </div>
-
         <!-- end nav section -->
 
         <div class="container pt-3">
 
             <div id="content">{% block content %}{% endblock %}</div>
 
-            <div id="footer">
-                {% block footer %}
-                <div class="row">
 
-                </div>
-                {% endblock %}
-            </div>
+
+
+
+
+            <!-- <footer>
+                © 2021 Data Final Project Group 6
+            </footer> -->
         </div>
-
     </body>
+
 
 </html>
