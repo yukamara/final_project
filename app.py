@@ -8,9 +8,9 @@ import pickle
 app = Flask(__name__)
 
 
-# load the pipeline object
-#model = pickle.load(open('amazon_reviews.pkl', 'rb'))
+# load pipeline object
 pipeline = load("amazon_reviews.joblib")
+model = pickle.load(open('amazon_reviews.pkl', 'rb'))
 
 
 # create route that renders index.html template
@@ -25,10 +25,12 @@ def send():
     if request.method == "POST":
         name = request.form["amazonReview"]
 
+
         review = pipeline.predict(name)
 
-    return render_template("form.html", review_text='This review is rated {}.')
+    return render_template("home.html", review=review)
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
