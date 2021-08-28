@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "index.html" %}
 
 {% block content %}
 
@@ -34,12 +34,38 @@
                 the rating for this review</button>
         </div>
     </form>
+
+    <div action="{{ url_for('result')}}" method="post">
+        <h3>{{star_rating}}</h3>
+    </div>
     <!-- Ends form section -->
 </div>
 <hr>
-<div>
-    <h2>Graph and other tables generated from the model will go below this line.</h2>
+<!-- Begin displays -->
+<div class="row">
+    <div class="col-md-12">
+        <p>Some text will follow here to provide some background about the images, graphs and other
+            diaplays. We hope to have an awesome project at the end of all this. Let's go guys.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3><span class="glyphicon glyphicon-link"></span>Place an image here</h3>
+    </div>
+    <div class="col-md-6">
+        <h3><span class="glyphicon glyphicon-link"></span> Place another image here</h3>
+    </div>
 </div>
 
+<div class="row">
+    <div class="col-md-6">
+        <h3><span class="glyphicon glyphicon-link"></span>Place a graph here</h3>
+    </div>
+    <div class="col-md-6">
+        <h3><span class="glyphicon glyphicon-link"></span> Place another graph here</h3>
+    </div>
+</div>
+
+<!-- end displays -->
 
 {% endblock %}
