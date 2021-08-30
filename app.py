@@ -38,23 +38,25 @@ def send():
 
         rating = pipeline.predict([review])
 
-        rating = [rating]
-
-        print(rating)
+        rating = [rating[0]]
+        
+        print(rating[0])
         # output = TfidfTransformer.transform(rating)
 
     return render_template("home.html", name=rating)
 
 # Create a route to get the start rating for the inputed review
-@app.route("/result", methods=["POST"])
-def result():
+# @app.route("/result", methods=["POST"])
+# def result():
 
-    data = request.get_json(force=True)
-    rating = pipeline.predict([np.array(list(data.values()))])
+#     data = request.get(force=True)
+#     rating = pipeline.predict([np.array(list(data.values()))])
 
-    star_rating = rating[0]
-    return jsonify(star_rating)
-    # return render_template("home.html", name=star_rating)
+#     star_rating = rating[0]
+
+#     print(star_rating)
+#     return star_rating
+#     # return render_template("home.html", name=star_rating)
 
 
 if __name__ == '__main__':

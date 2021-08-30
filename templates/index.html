@@ -12,9 +12,12 @@
 
         <style type="text/css">
             .jumbotron {
-                background: #2196F3;
-                color: white;
-                padding-bottom: 80px
+
+                min-height: 200px;
+                background-image: url("../static/images/machine-learning.jpg");
+                background-size: auto;
+                color: aqua;
+                padding-top: 250px;
             }
 
             hr {
@@ -25,7 +28,7 @@
                 box-sizing: border-box;
             }
 
-            body h1 h4 {
+            body h1 h3 h4 {
                 margin: 0;
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
@@ -36,7 +39,8 @@
 
             .topnav {
                 overflow: hidden;
-                background-color: #2196F3;
+                background-color: black;
+                margin-bottom: 20px;
             }
 
             .topnav a {
@@ -47,21 +51,23 @@
                 padding: 14px 16px;
                 text-decoration: none;
                 font-size: 17px;
+
             }
 
             .topnav a:hover {
-                background-color: red;
+                background-color: rgb(25, 0, 255);
                 color: black;
             }
 
             .topnav a.active {
-                background-color: #2196F3;
+
                 color: white;
                 border-color: crimson;
             }
 
-            .topnav .search-container {
-                float: right;
+            .topnav .ml-text {
+                color: white;
+                float: left;
             }
 
             .topnav input[type=text] {
@@ -84,6 +90,17 @@
                 width: 100px;
             }
 
+            .topnav {
+                border: 0;
+                background-color: black;
+                border-radius: 0px;
+                margin-bottom: 0;
+                height: 50px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
             .topnav .search-container button:hover {
                 background: #ccc;
             }
@@ -97,26 +114,59 @@
                     border: 2px solid #ccc;
                 }
             }
+
+            /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+            .wrapper {
+                position: relative;
+                min-height: 100%;
+                padding-bottom: 130px;
+                overflow: auto;
+            }
+
+            /* The code styles the text at the bottom of the footer */
+            .footer>.bottom {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 5px;
+                background: #6397d3ab;
+            }
+
+            .nav-image {
+                position: fixed;
+                bottom: 10px;
+                left: 155px;
+                width: 35px;
+                color: white;
+            }
         </style>
     </head>
 
     <body>
 
         <!-- begin nav section -->
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-        </div>
-        <!-- end nav section -->
 
-        <div class="container pt-3">
+        <div class="wrapper">
+            <div class="topnav">
+                <!-- <a class="active" href="#home">Home</a> -->
+                <div>
+                    <a class="ml-text" href="index.html"><b>Machine Learning</b></a>
 
-            <div id="content">{% block content %}{% endblock %}</div>
+                </div>
 
-            <div id="content">{% block graph %}{% endblock %}</div>
+            </div>
 
-            <!-- <footer>
-                © 2021 Data Final Project Group 6
-            </footer> -->
+            <!-- end nav section -->
+
+            <div class="container pt-3">
+
+                <div id="content">{% block content %}{% endblock %}</div>
+            </div>
+
+            <footer class="footer">
+                <div class="bottom">Oregon Data 2021 - Final Project</div>
+            </footer>
         </div>
     </body>
 

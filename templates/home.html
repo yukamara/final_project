@@ -2,19 +2,27 @@
 
 {% block content %}
 
-
 <!-- jumbotron begins-->
 <div class="jumbotron text-center">
     <div class="container">
-        <h1>Amazon Fine Foods Review Ratings</h1>
-        <hr>
-        <h4>
-            We built a machine learning model to help determine the ratings for Amazon Fine Foods
-            reviews. The Reviews are rated on a scale of 1-5, where 1 means the worst review and 5
-            means the best review.
-        </h4>
+
     </div>
 </div>
+<div class="row justify-content-md-center mb-4">
+    <h2 class='text-primary'>Amazon Fine Foods Review Ratings</h2>
+</div>
+<div>
+    <h1 style="text-align: center;">
+        Models and Analysis
+    </h1>
+    <h3>
+        We built a Sentiment Analysis (SA) model using LogisticRegression from SKLearn,
+        and a Principal Component Analysis (PCA) model that also utilized SKLearn.
+        After working with both we realized that the SA model suited our needs better
+        than the PCA model did.
+    </h3>
+</div>
+
 <!-- jumbotron ends -->
 
 <!-- Begin form section -->
@@ -35,10 +43,15 @@
         </div>
     </form>
 
-    <div action="{{ url_for('result')}}" method="post">
-        <h3>{{star_rating}}</h3>
-    </div>
     <!-- Ends form section -->
+
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>This review has a {{name}} star rating.</h3>
+        </div>
+    </div>
+
 </div>
 <hr>
 <!-- Begin displays -->
