@@ -43,7 +43,8 @@ def send():
         print(rating[0])
         # output = TfidfTransformer.transform(rating)
 
-    return render_template("home.html", name=rating)
+    # return render_template("home.html", name=rating)
+    return render_template("home.html", name='This review has a {} start rating.'.format((rating)))
 
 # Create a route to get the start rating for the inputed review
 # @app.route("/result", methods=["POST"])
