@@ -1,0 +1,75 @@
+
+
+
+<!-- jumbotron begins-->
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>Amazon Fine Foods Review Ratings</h1>
+        <link rel="stylesheet" href="static/css/style2.css">>
+        <hr>
+        <h4>
+            We built a machine learning model to help predict the ratings for Amazon Fine Foods
+            reviews. The Reviews are rated on a scale of 1-5, where 1 means the worst review and 5
+            means the best review.
+        </h4>
+    </div>
+</div>
+<!-- jumbotron ends -->
+
+<!-- Begin form section -->
+<div class="form-container ">
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('send')}}" method="post">
+        <label class="control-label col-sm-12" for="review-text"></label>
+        <div class="col-sm-12">
+            <input type="text" class="form-control" id="review-text" name="amazonReview"
+                placeholder="Enter a review" required="required">
+        </div>
+
+        <label class="control-label" for="">&nbsp;</label>
+        <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Click here to see
+                the rating for this review</button>
+        </div>
+    </form>
+    <!-- Ends form section -->
+</div>
+<br>
+<br>
+<hr>
+<div>
+    <h1 style="text-align: center;">
+        Models and Analysis
+    </h1>
+    <h3>
+        We built a Sentiment Analysis (SA) model using LogisticRegression from SKLearn, 
+        and a Principal Component Analysis (PCA) model that also utilized SKLearn.  
+        After working with both we realized that the SA model suited our needs better 
+        than the PCA model did.
+    </h3>
+    <h4>
+        Placeholder text describing how SA model works
+    </h4>
+    <img src='https://www.placecage.com/c/800/600' alt='Sentiment Graph'></img>
+    <br>
+
+
+    <h4>
+
+
+
+
+
+    </h4>
+    <br>
+    <img src='/Machine_Learning/wordcloud2.png' alt='Sentiment Cloud'></img>
+    <br>
+    <h4>
+        Possible text for PCA attempt and why it doesn't work
+    </h4>
+    <img src='https://www.placecage.com/c/600/800' alt='PCA'></img>
+
+</div>
+
+

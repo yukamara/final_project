@@ -1,0 +1,117 @@
+body {    
+    font-family: sans-serif;
+    font-size: 1.1em;
+    background-color: FF9900;
+  }
+
+  h1 {
+    color: rgb(35, 47, 62);
+    text-align: center;
+  }
+
+  h4 {
+    color: 232F3E;
+    text-align: center;
+  }
+
+  h3 {
+    color: 232F3E;
+    text-align: center;
+  }
+  
+  .navbar-light .navbar-brand {
+    color: FF9900;
+  }
+  
+  .navbar {
+    background-color: FF9900;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .navbar-brand {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: FF9900;
+    padding: 10px;
+    margin-left: 5%;
+  }
+  
+  .navbar-collapse {
+    position: absolute;
+    right: 5%;
+    font-size: small;
+  }
+  
+  .nav-item {
+    font-weight: bold;
+  }
+  
+  .content {
+    width:90%;
+    margin: 20px auto;
+    padding:1em;
+  }
+    
+  .buttons {
+    margin-bottom: .5em;
+  }
+  
+  .text-left {
+    text-align: left;
+    color: FF9900;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+  }
+  
+  .text-center {
+    color: FF9900;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+  }
+  
+  p:not(.intro) {
+    text-align: justify;
+    color: FF9900;
+  }
+  
+  .thumbnail {
+    width:50%;
+  }
+  
+  .main-image {      
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+      float: left;
+  }
+  
+  .col-md-8 {
+    background-color: FF9900;
+  }
+  
+  .col-sm-12,.col-md-4 {
+    background-color: FF9900;
+  }
+  
+  div.col-sm-12.col-md-12 div.col-lg-6.col-sm-12 img {
+    width: 100%;
+  }
+  
+  .imagetiles {
+    background-color: FF9900;
+  }
+  div.imagetiles div.col-lg-6.col-sm-12 img {
+    width: 100%;
+  }
+  
+  div.col-sm-12.col-md-12 p {
+    color: FF9900;
+    font-size: medium;
+  }
+  
+  
+
+
+    
