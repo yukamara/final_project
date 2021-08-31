@@ -4,143 +4,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title> Amazom Reviews Ratings</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 
-        <style type="text/css">
-            .jumbotron {
 
-                min-height: 200px;
-                background-image: url("../static/images/machine-learning.jpg");
-                background-size: auto;
-                color: aqua;
-                padding-top: 250px;
-            }
-
-            hr {
-                border-color: black;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            body h1 h3 h4 {
-                margin: 0;
-                font-family: Georgia, 'Times New Roman', Times, serif;
-            }
-
-            h1 h4 {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-            }
-
-            .topnav {
-                overflow: hidden;
-                background-color: black;
-                margin-bottom: 20px;
-            }
-
-            .topnav a {
-                float: left;
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                font-size: 17px;
-
-            }
-
-            .topnav a:hover {
-                background-color: rgb(25, 0, 255);
-                color: black;
-            }
-
-            .topnav a.active {
-
-                color: white;
-                border-color: crimson;
-            }
-
-            .topnav .ml-text {
-                color: white;
-                float: left;
-            }
-
-            .topnav input[type=text] {
-                padding: 6px;
-                margin-top: 8px;
-                font-size: 17px;
-                border: none;
-                width: 700px;
-            }
-
-            .topnav .search-container button {
-                float: right;
-                padding: 6px 10px;
-                margin-top: 8px;
-                margin-right: 16px;
-                background: #2196F3;
-                font-size: 17px;
-                border: none;
-                cursor: pointer;
-                width: 100px;
-            }
-
-            .topnav {
-                border: 0;
-                background-color: black;
-                border-radius: 0px;
-                margin-bottom: 0;
-                height: 50px;
-                position: fixed;
-                top: 0;
-                width: 100%;
-            }
-
-            .topnav .search-container button:hover {
-                background: #ccc;
-            }
-
-            @media screen and (max-width: 600px) {
-                .topnav .search-container {
-                    float: none;
-                }
-
-                .topnav input[type=text] {
-                    border: 2px solid #ccc;
-                }
-            }
-
-            /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
-            .wrapper {
-                position: relative;
-                min-height: 100%;
-                padding-bottom: 130px;
-                overflow: auto;
-            }
-
-            /* The code styles the text at the bottom of the footer */
-            .footer>.bottom {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                padding: 5px;
-                background: #6397d3ab;
-            }
-
-            .nav-image {
-                position: fixed;
-                bottom: 10px;
-                left: 155px;
-                width: 35px;
-                color: white;
-            }
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
+            rel="stylesheet">
     </head>
 
     <body>
@@ -149,18 +26,26 @@
 
         <div class="wrapper">
             <div class="topnav">
-                <!-- <a class="active" href="#home">Home</a> -->
                 <div>
-                    <a class="ml-text" href="index.html"><b>Machine Learning</b></a>
-
+                    <a class="ml-text" href="/"><b>Machine Learning</b></a>
                 </div>
-
             </div>
 
             <!-- end nav section -->
 
-            <div class="container pt-3">
+            <div class="container pt-5">
+                <div class="jumbotron text-center"></div>
 
+                <div class="row">
+                    <div class="head-text col-md-12">
+                        <h1>Welcome to the Amazon Fine Foods Reviews</h1>
+                        <h3>Use the tools and diaplays below to explore the Amazon Fine Foods
+                            reviews</h3>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <br>
                 <div id="content">{% block content %}{% endblock %}</div>
             </div>
 
@@ -169,6 +54,5 @@
             </footer>
         </div>
     </body>
-
 
 </html>

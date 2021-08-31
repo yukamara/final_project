@@ -1,18 +1,20 @@
 #import Flask
 from joblib import load
 import numpy as np
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, flash, render_template, request, redirect, url_for, jsonify
 import pickle
+import os
+from werkzeug.utils import secure_filename
 from sklearn.feature_extraction.text import TfidfTransformer
+
 
 
 # create an instance of Flask
 app = Flask(__name__)
 
-
 # load pipeline object
 pipeline = load("amazon_reviews.joblib")
-model = pickle.load(open('amazon_reviews.pkl', 'rb'))
+
 
 # Define a helper function
 def double(x):
@@ -38,26 +40,12 @@ def send():
 
         rating = pipeline.predict([review])
 
-        rating = [rating[0]]
+        rating = rating[0]
         
-        print(rating[0])
-        # output = TfidfTransformer.transform(rating)
+        print(rating)
 
-    # return render_template("home.html", name=rating)
-    return render_template("home.html", name='This review has a {} start rating.'.format((rating)))
+    return render_template("home.html", name='This review has a {} star rating.'.format(rating))
 
-# Create a route to get the start rating for the inputed review
-# @app.route("/result", methods=["POST"])
-# def result():
-
-#     data = request.get(force=True)
-#     rating = pipeline.predict([np.array(list(data.values()))])
-
-#     star_rating = rating[0]
-
-#     print(star_rating)
-#     return star_rating
-#     # return render_template("home.html", name=star_rating)
 
 
 if __name__ == '__main__':

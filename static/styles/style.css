@@ -1,0 +1,142 @@
+
+.jumbotron {
+
+    min-height: 300px;
+    background-image: url("../images/machine-learning.jpg");
+    background-size:80%;
+    color: rgb(255, 0, 13);
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.head-text {
+  font-size: 3em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+hr {
+    border-color: black;
+    padding: 2px;
+    color: black;
+}
+
+html { 
+    font-family: sans-serif; 
+    padding: 1rem; }
+
+* {
+    box-sizing: border-box;
+}
+
+body h1 h3 h4 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.topnav a:hover {
+    background-color: rgb(25, 0, 255);
+    color: black;
+}
+
+.topnav a.active {
+
+    color: white;
+    border-color: crimson;
+}
+
+.topnav .ml-text {
+    color: white;
+    float: left;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 700px;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #2196F3;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+.topnav {
+    border: 0;
+    background-color: black;
+    border-radius: 0px;
+    margin-bottom: 0;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+
+    .topnav input[type=text] {
+        border: 2px solid #ccc;
+    }
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 130px;
+    overflow: auto;
+}
+
+/* The code styles the text at the bottom of the footer */
+.footer>.bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background: #6397d3ab;
+}
+
+.nav-image {
+    position: fixed;
+    bottom: 10px;
+    left: 155px;
+    width: 35px;
+    color: white;
+}
