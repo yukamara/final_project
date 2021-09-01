@@ -1,0 +1,103 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<!-- jumbotron begins-->
+
+<div class="row">
+    <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">
+        Models and Analysis
+    </h1>
+    <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;">
+        We built a Sentiment Analysis (SA) model using LogisticRegression from SKLearn,
+        and a Principal Component Analysis (PCA) model that also utilized SKLearn.
+        After working with both we realized that the SA model suited our needs better
+        than the PCA model did.
+    </h3>
+</div>
+
+<!-- jumbotron ends -->
+<div class="row">
+    <div class="col-sm-12">
+        <!-- Begin form section -->
+        <div class="form-container ">
+            <!-- Main input for receiving query to our ML and displaying the result -->
+            <form action="{{ url_for('send')}}" method="post">
+
+                <!-- Area for inputing the review whose rating we want to determine -->
+                <label class="control-label col-sm-12" for="review-text"></label>
+                <textarea id="review-text" class="form-control mb-2" name="amazonReview"
+                    placeholder="Enter a review" required="required"></textarea>
+
+                <!-- Button to display the review's star rating -->
+                <label class="control-label" for="">&nbsp;</label>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Click here to
+                    see the review rating</button>
+
+                <!-- Reset button     -->
+                <a type="submit" href="/" class="btn btn-primary btn-block btn-large">Reset</a>
+            </form>
+        </div>
+        <!-- Ends form section -->
+
+        <br>
+        <!-- Code for displaying the star rating when button is clicked -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{name}}</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
+<hr>
+<!-- Begin displays -->
+<div class="row">
+    <div class="col-md-12">
+        <p>Some text will follow here to provide some background about the images, graphs and
+            other diaplays. We hope to have an awesome project at the end of all this. Let's go
+            guys.
+        </p>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <h5>Display 1: Description goes here</h5>
+        <img src="{{ url_for('static', filename='images/image.jfif') }}"
+            alt="Image description here" />
+    </div>
+    <div class="col-md-4">
+        <h5>Display 2: Description goes here</h5>
+        <img src="{{ url_for('static', filename='images/image2.jfif') }}"
+            alt="Image description here" />
+    </div>
+    <div class="col-md-4">
+        <h5>Display 3: Description goes here</h5>
+        <img src="{{ url_for('static', filename='images/image3.jfif') }}"
+            alt="Image description here" />
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <h5>Display 4: Description goes here</h5>
+        <img src="{{ url_for('static', filename='images/image4.jfif') }}"
+            alt="Image description here" />
+    </div>
+    <div class="col-md-4">
+        <h5>Display 5: Description goes here</h5>
+        <img src="{{ url_for('static', filename='images/image5.jfif') }}"
+            alt="Image description here" />
+    </div>
+    <div class="col-md-4">
+        <h5>Display 6: Description goes here</h5>
+        <img src="{{ url_for('static', filename='images/image6.png') }}"
+            alt="Image description here" />
+    </div>
+</div>
+<!-- end displays -->
+
+{% endblock %}
