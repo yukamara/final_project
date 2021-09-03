@@ -5,6 +5,10 @@ data can also be downloaded from my S3 at: https://data-bootcamp-x399.s3.us-east
 the ipynb template file is set up to grab data from the S3 file already
 
 ---
+## URL for Heroku app
+
+https://final-project-group6.herokuapp.com/
+
 ## How to run locally
 
 1. Download .zip or clone repo
