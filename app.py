@@ -17,18 +17,18 @@ pipeline = load("amazon_reviews.joblib")
 
 
 # Define a helper function
-def double(x):
-    return x*2
+# def double(x):
+#     return x*2
 
 # create route that renders index.html template
 @app.route('/')
 def home():
     
-    data = {
-        "first": "Yusufu",
-        "last": "Kamara",
-        "number": double(5)
-    }
+    # data = {
+    #     "first": "Yusufu",
+    #     "last": "Kamara",
+    #     "number": double(5)
+    # }
     return render_template('home.html', data=data)
 
 
